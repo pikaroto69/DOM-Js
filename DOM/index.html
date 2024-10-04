@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1 id="titulo">1</h1>
+        <button id="add">Add</button>
+        <button id="rem">Remove</button>
+        <button id="res">Reset</button>
+        <script>
+
+            function clicouAdd() {
+                var titulo = parseInt(document.querySelector('#titulo').textContent)
+                var titulo1 = titulo + 1
+                document.querySelector('#titulo').textContent = titulo1
+            }
+
+            function clicouRem() {
+                var titulo = parseInt(document.querySelector('#titulo').textContent)
+                var titulo2 = titulo - 1
+                document.querySelector('#titulo').textContent = titulo2
+            }
+            function clicouRes() {
+                var titulo = parseInt(document.querySelector('#titulo').textContent)
+                var titulo3 = titulo - titulo
+                document.querySelector('#titulo').textContent = titulo3
+            }
+            
+            var botao1 = document.querySelector("#add")
+            botao1.addEventListener('click', clicouAdd)
+            
+            var botao2 = document.querySelector("#rem")
+            botao2.addEventListener('click', clicouRem)
+
+            var botao3 = document.querySelector("#res")
+            botao3.addEventListener('click', clicouRes)
+
+        </script>
+</body>
+</html>
